@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="css/styles.css">
+    <title>My Landing Page</title>
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="brand">Code<span class="sensei">Sensei</span></div>
+<!--        use id for js!-->
+        <!-- id is great to link js in html !-->
+        <ul class="topnav" id="navbar-toggle">
+            <li><a class="nav-link" href="#">Home</a></li>
+            <li><a class="nav-link" href="#">Products</a></li>
+            <li><a class="nav-link" href="#">About Us</a></li>
+            <li><a class="nav-link" href="#">Contact Us</a></li>
+            <li class="dropdownLink"><a onclick="toggleDropdown(); return false;" href="javascript:void(0)">&#9776;</a></li>
+
+        </ul>
+
+    </nav>
+
+    <header>
+        <div class="headshot-wrapper">
+            <img class="headshot" src="assets/IMG_6554.jpg" alt="profile image">
+            <h1>Christina Phanthamany</h1>
+        </div>
+    </header>
+
+    <section class="services">
+        <div class="container">
+            <div class="media-object">
+                <div class="icon-right">
+                    <img class="icon" src="assets/graph_lines.svg" alt="graph chart">
+                </div>
+                <div class="text-wrapper-left">
+                    <h3 class="text-header">About this project</h3>
+                    <div class="text-info">
+                         I am learning full-stack web development through Devslopes! In this project, I am working
+                        with Flexbox using WebStorm. I get to practice performing live edits in safari and then makes
+                        changes to my code in WebStorm. I am also practicing html structures like creating wrappers
+                        for my content for better access when styling in CSS.
+                    </div>
+                </div>
+            </div>
+
+            <div class="media-object">
+                <div class="icon-left">
+                    <img class="icon" src="assets/graph_lines.svg" alt="graph chart">
+                </div>
+                <div class="text-wrapper-right">
+                    <h3 class="text-header">Creating the NavBar</h3>
+                    <div class="text-info">
+                        I created a navbar class to contain another class of the actual links/list items,
+                        which was designed as an unordered list. The unordered list also had an id property where ids
+                        typically link JavaScript action into your HTML. Each list item needed to have an additional class in
+                        order to style the text as well. To help the navbar look nicer with smaller screens, I used an
+                        &lta onclick="toggleDropdown()"; return false;" href="javascript:void(0)"&gt. The JS function
+                        is linked to a media query and concatenates a phrase onto a class name based on the size of the
+                        media screen size. This helps the webpage become responsive with CSS styling within the media
+                        query. I used the minified version of jQuery and nestled that above my JS source so that jQuery
+                        script would run first prior to my code. I am still learning more about JS as I haven't had
+                        much practice with it.
+                    </div>
+                </div>
+            </div>
+
+            <div class="media-object">
+                <div class="icon-right">
+                    <img class="icon" src="assets/pie_chart.svg" alt="graph chart">
+                </div>
+                <div class="text-wrapper-left">
+                    <h3 class="text-header">Ordering in Flexbox</h3>
+                    <div class="text-info">
+                        In working with styling in CSS, Flexbox makes it easy to order
+                        my items using "order:" and assigning the value to the class
+                        container of each item. For spacing of the items, I used "align-items"
+                        to center my image and text vertically and "justify-content" to center
+                        the items horizontally without affecting the style of the text itself.
+                        A padding of 4rem 1rem gives space around each media-object class
+                        container to look cleaner and less cluttered. I also learned that &ltp&gt
+                        has an inherent display of block and &ltspan&gt has an inherent display of
+                        in-line. That way, I could style the "CODESENSAI" in the navbar as such.
+                    </div>
+                </div>
+            </div>
+
+            <div class="media-object">
+                <div class="icon-left">
+                    <img class="icon" src="assets/assistant_icon.svg" alt="graph chart">
+                </div>
+                <div class="text-wrapper-right">
+                    <h3 class="text-header">Styling the button</h3>
+                    <div class="text-info">
+                        For the button, I created a container class as a wrapper to hold the button.
+                        I also created a class for the button object in order to style it in CSS. The default
+                        HTML button styling looks pretty dull so I gave it some color, removed the border line,
+                        added some padding to give the text some space from the border, and lastly created a
+                        box-shadow and gave it a border radius to round the hard edges. Box-shadow numbers go in
+                        this order: x-offset shadow, y-offset shadow, blurring, spreading of the shadow, color. The
+                        x- and y-offsets are required values but blur and spread are optional. Spread refers to the size
+                        of the shadow. While the color is optional (as the default color is the text color, it's
+                        good practice to make it explicit in order to work across different web browsers. This color
+                        is formatted in rgba(int, int, int, value between 0 and 1). The last value affects the
+                        transparency of the color.
+                    </div>
+                </div>
+            </div>
+
+            <div class="quote-btn-wrapper">
+                <button class="quote-btn">Get a quote</button>
+            </div>
+        </div>
+    </section>
+
+    <section class="portfolio">
+        <div class="container">
+            <div class="section-header">
+                <h1 class="header">Previous Works</h1>
+            </div>
+            <div class="portfolio-wrapper">
+                <div class="portfolio-object">
+                    <!-- when making actual portfolio, replace portfolio-box with own imgs-->
+                    <div class="portfolio-box"></div>
+                    <h4>Project</h4>
+                    <div class="portfolio-text">
+                        Here I created another section that holds portfolio boxes. The neat feature I learned was
+                        working with hover actions. This box uses "transform" to scale up a specified size when the
+                        cursor hovers over the object. To style the box itself, I used "transition: .2s ease-in-out;"
+                        to get a smooth action.
+                    </div>
+                </div>
+                <div class="portfolio-object">
+                    <!-- when making actual portfolio, replace portfolio-box with own imgs-->
+                    <div class="portfolio-box"></div>
+                    <h4>Project</h4>
+                    <div class="portfolio-text">
+                        Instead of creating to rows of portfolio objects, Flexbox has a cool feature that allows items
+                        in-lin wrap around when confined within a max-width container. Then I used a "justify-content:
+                        space around;" to spread space evenly between the portfolio objects.
+                    </div>
+                </div>
+                <div class="portfolio-object">
+                    <!-- when making actual portfolio, replace portfolio-box with own imgs-->
+                    <div class="portfolio-box"></div>
+                    <h4>Project</h4>
+                    <div class="portfolio-text">
+                        Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                        Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown
+                        printer took a galley of type and scrambled it to make a type specimen book.
+                    </div>
+                </div>
+                <div class="portfolio-object">
+                    <!-- when making actual portfolio, replace portfolio-box with own imgs-->
+                    <div class="portfolio-box"></div>
+                    <h4>Project</h4>
+                    <div class="portfolio-text">
+                        Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                        Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown
+                        printer took a galley of type and scrambled it to make a type specimen book.
+                    </div>
+                </div>
+                <div class="portfolio-object">
+                    <!-- when making actual portfolio, replace portfolio-box with own imgs-->
+                    <div class="portfolio-box"></div>
+                    <h4>Project</h4>
+                    <div class="portfolio-text">
+                        Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                        Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown
+                        printer took a galley of type and scrambled it to make a type specimen book.
+                    </div>
+                </div>
+                <div class="portfolio-object">
+                    <!-- when making actual portfolio, replace portfolio-box with own imgs-->
+                    <div class="portfolio-box"></div>
+                    <h4>Project</h4>
+                    <div class="portfolio-text">
+                        Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                        Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown
+                        printer took a galley of type and scrambled it to make a type specimen book.
+                    </div>
+                </div>
+                <div class="portfolio-object">
+                    <!-- when making actual portfolio, replace portfolio-box with own imgs-->
+                    <div class="portfolio-box"></div>
+                    <h4>Project</h4>
+                    <div class="portfolio-text">
+                        Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                        Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown
+                        printer took a galley of type and scrambled it to make a type specimen book.
+                    </div>
+                </div>
+                <div class="portfolio-object">
+                    <!-- when making actual portfolio, replace portfolio-box with own imgs-->
+                    <div class="portfolio-box"></div>
+                    <h4>Project</h4>
+                    <div class="portfolio-text">
+                        Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                        Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown
+                        printer took a galley of type and scrambled it to make a type specimen book.
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+    <section class="contact-container">
+        <div class="container">
+            <div class="section-header">
+                <h1>Drop us a line</h1>
+            </div>
+            <form action="">
+                <label for="email">*email</label>
+                <div class="form-group">
+                    <input class="form-control" type="email" id="email">
+                </div>
+                <label for="name">*name</label>
+                <div class="form-group">
+                    <input class="form-control" type="text" id="name">
+                </div>
+                <label for="message">*message</label>
+                <div class="form-group">
+                    <textarea class="form-control" id="message" rows="6"></textarea>
+                </div>
+                <div class="submit-btn-wrapper">
+                    <button class="quote-btn">Submit</button>
+                </div>
+            </form>
+        </div>
+    </section>
+
+
+
+<!--want jquery to load first before accessing OUR js-->
+<script
+  src="https://code.jquery.com/jquery-3.3.1.min.js"
+  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+  crossorigin="anonymous"></script>
+<script type="text/javascript" src="main.js"></script>
+</body>
+</html>
